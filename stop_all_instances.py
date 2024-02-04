@@ -14,6 +14,9 @@ for reservation in response['Reservations']:
         instance_id = instance['InstanceId']
          # iterate over values stored in reservation and store values of 'Instances' key
          # in instance
-        print(f"Stopping instance: {instance_id}")
-        ec2.stop_instances(InstanceIds=[instance_id])
+        try:
+            ec2.stop_instances(InstanceIds=[instance_id])
+            print(f'Stopping instance: {instance_id}')
+        except:
+            print(f'Error when stopping: {instance_id')
             
