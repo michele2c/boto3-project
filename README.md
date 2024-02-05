@@ -1,2 +1,2 @@
 # boto3-project
-Using Python with Boto3
+Python and Boto3 to create a script that automates the process of stopping instances. 
